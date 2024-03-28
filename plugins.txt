@@ -1,0 +1,13 @@
+## gruvbox - colorscheme
+## nvim-tree - file explorer
+
+
+TODO: 
+lazygit
+undotree
+dressing configuring
+
+make keymaps silent
+movement keymaps insert mode
+figure why vim diagnostics float doesnt do it
+finish adding all language servers
