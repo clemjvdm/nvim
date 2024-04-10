@@ -18,8 +18,9 @@ return {
         })
 
         mason_lspconfig.setup({
-            ensure_installed = {"lua_ls", "html", "cssls", "clangd", "cmake", "hls", "jsonls", "jdtls", "tsserver", "ltex", "remark_ls", "pyright", "taplo"}
+            ensure_installed = {"lua_ls", "rust_analyzer", "html", "cssls", "clangd", "cmake", "hls", "jsonls", "jdtls", "tsserver", "ltex", "remark_ls", "pyright", "taplo"}
         })
+
     end,
 
 }
