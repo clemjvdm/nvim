@@ -46,6 +46,8 @@ return {
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
+--        lspconfig["ltex"].setup({})
+
         lspconfig["html"].setup({
             capabilities = capabilities,
             on_attach = on_attach,

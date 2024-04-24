@@ -4,7 +4,7 @@ local keymap = vim.keymap
 
 local opts = {noremap = true, silent = true}
 
-keymap.set("i","kl","<ESC>", opts)
+keymap.set("i","jk","<ESC>", opts)
 keymap.set("n","<leader>nt",":tabnew<CR>", opts)
 keymap.set("n","<S-l>",":tabnext<CR>", opts)
 keymap.set("n","<S-h>",":tabprevious<CR>", opts)
