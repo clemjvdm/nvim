@@ -12,6 +12,7 @@ keymap.set("n","<leader>w",":w<CR>", opts)
 keymap.set("n","<leader>q",":bd<CR>", opts)
 keymap.set("n","<leader>Q", ":bd!<CR>", opts)
 
+-- move in normal mode
 keymap.set("n","j", "h", opts)
 keymap.set("n","k", "j", opts)
 keymap.set("n","l", "k", opts)
@@ -23,11 +24,17 @@ keymap.set("i","<C-k>", "<Down>", opts)
 keymap.set("i","<C-l>", "<Up>", opts)
 keymap.set("i","<C-;>", "<Right>", opts)
 
+-- move in visual mode
+keymap.set("v","j", "h", opts)
+keymap.set("v","k", "j", opts)
+keymap.set("v","l", "k", opts)
+keymap.set("v",";", "l", opts)
+
 -- terminal
 -- configured in toggleterm plugin file
 
 --lazygit
--- keymap.set("n", "<leader>g", ":term lazygit<CR> <BAR> :setlocal nonumber<CR>i", opts)
+-- TODO: Create new lazygit terminal with toggleterm
 
 -- no highlight
 keymap.set("n","<leader>nn", ":noh<CR>", opts)
