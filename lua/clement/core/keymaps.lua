@@ -24,9 +24,7 @@ keymap.set("i","<C-l>", "<Up>", opts)
 keymap.set("i","<C-;>", "<Right>", opts)
 
 -- terminal
--- keymap.set("n", "<leader>t", ":ToggleTerm<CR> <BAR> :setlocal nonumber<CR>i", opts)
-keymap.set("n", "<leader>t", ":ToggleTerm<CR>", opts)
-keymap.set('t', '<Esc>', [[<C-\><C-n>]])
+-- configured in toggleterm plugin file
 
 --lazygit
 -- keymap.set("n", "<leader>g", ":term lazygit<CR> <BAR> :setlocal nonumber<CR>i", opts)
