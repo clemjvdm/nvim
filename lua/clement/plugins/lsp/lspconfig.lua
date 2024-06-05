@@ -71,16 +71,21 @@ return {
         })
 
         lspconfig["rust_analyzer"].setup({
+            on_attach = on_attach,
             settings = {
                 ['rust-analyzer'] = {
                     diagnostics = {
-                        enable = false;
+                        enable = true,
+                    },
+                    cargo = {
+                        allFeatures = true,
                     }
                 }
             }
         })
 
         lspconfig["pyright"].setup({
+            on_attach = on_attach,
 
         })
     end,

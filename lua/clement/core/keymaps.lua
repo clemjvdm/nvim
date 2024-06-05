@@ -24,11 +24,12 @@ keymap.set("i","<C-l>", "<Up>", opts)
 keymap.set("i","<C-;>", "<Right>", opts)
 
 -- terminal
-keymap.set("n", "<leader>t", ":term<CR> <BAR> :setlocal nonumber<CR>i", opts)
+-- keymap.set("n", "<leader>t", ":ToggleTerm<CR> <BAR> :setlocal nonumber<CR>i", opts)
+keymap.set("n", "<leader>t", ":ToggleTerm<CR>", opts)
 keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 
 --lazygit
-keymap.set("n", "<leader>g", ":term lazygit<CR> <BAR> :setlocal nonumber<CR>i", opts)
+-- keymap.set("n", "<leader>g", ":term lazygit<CR> <BAR> :setlocal nonumber<CR>i", opts)
 
 -- no highlight
 keymap.set("n","<leader>nn", ":noh<CR>", opts)
@@ -40,6 +41,11 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>k', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-;>', '<C-w>l', { noremap = true })
 
 -- trouble.nvim
-vim.keymap.set("n", "<leader>tr", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>tr", function()
+    require("trouble").toggle()
+--    require("todo-comments")
+--    vim.cmd('TodoTrouble')
+
+end)
 
 
