@@ -46,7 +46,7 @@ return {
         })
 
 
-	function function_with_params(f, params)
+	local function function_with_params(f, params)
 	    return function()
                 return f(params)
             end

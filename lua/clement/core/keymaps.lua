@@ -8,11 +8,15 @@ keymap.set("i","jk","<ESC>", opts)
 keymap.set("n","<leader>nt",":tabnew<CR>", opts)
 keymap.set("n","<S-l>",":tabnext<CR>", opts)
 keymap.set("n","<S-h>",":tabprevious<CR>", opts)
-keymap.set("n","<leader>w",":w<CR>", opts)
-keymap.set("n","<leader>q",":bd<CR>", opts)
-keymap.set("n","<leader>Q", ":bd!<CR>", opts)
+keymap.set("n","<leader>d",":bd<CR>", opts)
+keymap.set("n","<leader>D", ":bd!<CR>", opts)
 
 -- move in normal mode
+--[[keymap.set("n","j", "h", opts)
+keymap.set("n","k", "j", opts)
+keymap.set("n","l", "k", opts)
+keymap.set("n",";", "l", opts)
+
 keymap.set("n","j", "h", opts)
 keymap.set("n","k", "j", opts)
 keymap.set("n","l", "k", opts)
@@ -28,7 +32,7 @@ keymap.set("i","<C-;>", "<Right>", opts)
 keymap.set("v","j", "h", opts)
 keymap.set("v","k", "j", opts)
 keymap.set("v","l", "k", opts)
-keymap.set("v",";", "l", opts)
+keymap.set("v",";", "l", opts)]]--
 
 -- terminal
 -- configured in toggleterm plugin file
@@ -40,10 +44,10 @@ keymap.set("v",";", "l", opts)
 keymap.set("n","<leader>nn", ":noh<CR>", opts)
 
 -- Remap window switching to Ctrl-hjkl
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>h', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>j', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>k', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-;>', '<C-w>l', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
 
 -- trouble.nvim
 vim.keymap.set("n", "<leader>tr", function()

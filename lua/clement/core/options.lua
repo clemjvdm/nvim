@@ -7,6 +7,7 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.smartindent = true
 opt.autoindent = true
+opt.relativenumber = true
 
 -- search
 opt.smartcase = true
