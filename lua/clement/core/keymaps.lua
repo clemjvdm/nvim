@@ -11,6 +11,12 @@ keymap.set("n","<S-h>",":tabprevious<CR>", opts)
 keymap.set("n","<leader>d",":bd<CR>", opts)
 keymap.set("n","<leader>D", ":bd!<CR>", opts)
 
+-- move when in insert mdoe
+keymap.set("i","<C-h>", "<Left>", opts)
+keymap.set("i","<C-j>", "<Down>", opts)
+keymap.set("i","<C-k>", "<Up>", opts)
+keymap.set("i","<C-l>", "<Right>", opts)
+
 -- move in normal mode
 --[[keymap.set("n","j", "h", opts)
 keymap.set("n","k", "j", opts)
@@ -21,12 +27,6 @@ keymap.set("n","j", "h", opts)
 keymap.set("n","k", "j", opts)
 keymap.set("n","l", "k", opts)
 keymap.set("n",";", "l", opts)
-
--- move when in insert mdoe
-keymap.set("i","<C-j>", "<Left>", opts)
-keymap.set("i","<C-k>", "<Down>", opts)
-keymap.set("i","<C-l>", "<Up>", opts)
-keymap.set("i","<C-;>", "<Right>", opts)
 
 -- move in visual mode
 keymap.set("v","j", "h", opts)

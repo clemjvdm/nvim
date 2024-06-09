@@ -13,8 +13,8 @@ return {
                 path = "tail",
             }
         })
-        vim.keymap.set("n", "L", "<Plug>(CybuPrev)")
-        vim.keymap.set("n", "K", "<Plug>(CybuNext)")
+        vim.keymap.set("n", "K", "<Plug>(CybuPrev)")
+        vim.keymap.set("n", "J", "<Plug>(CybuNext)")
     end,
 
 }

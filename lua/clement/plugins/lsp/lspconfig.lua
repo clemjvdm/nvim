@@ -17,7 +17,7 @@ return {
 
             -- keymaps
             opts.desc = "Show LSP references"
-            keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+            keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
 
             opts.desc = "Go to declaration"
             keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
@@ -41,7 +41,7 @@ return {
             keymap.set("n", "<leader>cd",  vim.diagnostic.open_float, opts)
 
             opts.desc = "Show documentation"
-            keymap.set("n", "<leader>d", vim.lsp.buff.hover.documentation, opts)
+            keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -87,6 +87,12 @@ return {
         lspconfig["pyright"].setup({
             on_attach = on_attach,
 
+        })
+
+        lspconfig["tsserver"].setup({
+            on_attach = on_attach,
+            filetypes = {"typescript", "javascript"},
+            root_dir =  lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git")
         })
     end,
 }
