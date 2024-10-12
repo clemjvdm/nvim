@@ -17,28 +17,19 @@ keymap.set("i","<C-j>", "<Down>", opts)
 keymap.set("i","<C-k>", "<Up>", opts)
 keymap.set("i","<C-l>", "<Right>", opts)
 
--- move in normal mode
---[[keymap.set("n","j", "h", opts)
-keymap.set("n","k", "j", opts)
-keymap.set("n","l", "k", opts)
-keymap.set("n",";", "l", opts)
+-- todo.nvim
+vim.keymap.set("n", "<leader>to", ":Trouble todo<CR>", opts)
 
-keymap.set("n","j", "h", opts)
-keymap.set("n","k", "j", opts)
-keymap.set("n","l", "k", opts)
-keymap.set("n",";", "l", opts)
-
--- move in visual mode
-keymap.set("v","j", "h", opts)
-keymap.set("v","k", "j", opts)
-keymap.set("v","l", "k", opts)
-keymap.set("v",";", "l", opts)]]--
+-- trouble.nvim
+vim.keymap.set("n", "<leader>tr", ":Trouble<CR>", opts)
 
 -- terminal
 -- configured in toggleterm plugin file
 
 --lazygit
 -- TODO: Create new lazygit terminal with toggleterm
+-- TODO: Migrate all keymaps into this file
+-- TODO: Keymaps for telescope
 
 -- no highlight
 keymap.set("n","<leader>nn", ":noh<CR>", opts)
@@ -49,12 +40,5 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
 
--- trouble.nvim
-vim.keymap.set("n", "<leader>tr", function()
-    require("trouble").toggle()
---    require("todo-comments")
---    vim.cmd('TodoTrouble')
-
-end)
 
 
